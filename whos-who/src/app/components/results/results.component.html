@@ -1,3 +1,26 @@
-<p>
-  results works!
-</p>
+<!-- results.component.html -->
+ <div class="container"> 
+  <div class="results-container">
+    <h1 class="results-title">WELL DONE!</h1>
+    <p class="score">
+      {{ correctAnswers }} / {{ totalQuestions }} Correct
+    </p>
+
+    <!-- Progress Circle with Dynamic Style -->
+    <div class="progress-circle" [ngStyle]="{'background': 'conic-gradient(#4caf50 ' + progress + 'deg, #555 0deg)'}">
+      <div class="circle-inner"></div>
+    </div>
+
+    <p class="name-prompt">Enter your name for the leaderboard!</p>
+
+    <input
+      [(ngModel)]="playerName"
+      placeholder="Enter your name"
+      type="text"
+      class="name-input"
+      required
+    />
+
+    <button class="continue-btn" (click)="submitScore()">Continue</button>
+  </div>
+</div>
