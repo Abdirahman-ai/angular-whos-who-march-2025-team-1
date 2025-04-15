@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  padding: 10px;
+  a {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+}
