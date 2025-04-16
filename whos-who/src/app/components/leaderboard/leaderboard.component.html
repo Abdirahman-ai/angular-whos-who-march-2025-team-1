@@ -1,3 +1,30 @@
-<p>
-  leaderboard works!
-</p>
+<!-- leaderboard.component.html -->
+
+<div class="container"> 
+
+  <div class="leaderboard-container">
+    <h1 class="leaderboard-title">Leaderboard</h1>
+    
+    <!-- Check if there are any leaderboard entries -->
+    <div *ngIf="leaderboard.length > 0; else noData" class="leaderboard-table">
+      <div class="leaderboard-header">
+        <span>Name</span>
+        <span>Score</span>
+      </div>
+      
+      <div *ngFor="let player of leaderboard" class="leaderboard-row">
+        <span>{{ player.name }}</span>
+        <span>{{ player.score }}</span>
+      </div>
+    </div>
+    
+    <!-- Display this if no data is available -->
+    <ng-template #noData>
+      <p>No leaderboard data available.</p>
+    </ng-template>
+
+    <!-- Button to go back to the game -->
+    <button class="play-again" (click)="playAgain()">Play Again</button>
+  </div>
+
+</div>
