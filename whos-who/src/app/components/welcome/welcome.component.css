@@ -1,0 +1,8 @@
+.welcome-container {
+  text-align: center;
+  background: var(--modal-foreground);
+  border-radius: 10px;
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
+}

@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';  // Import FormsModule
-import { CommonModule } from '@angular/common';  // Import CommonModule
+import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { CommonModule } from '@angular/common';
+import { CircularProgressComponent } from '../common/circular-progress/circular-progress.component'; // Import CommonModule
 
 @Component({
   selector: 'app-results',
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.css'],
   standalone: true,
-  imports: [FormsModule, CommonModule]  // Add CommonModule here for ngStyle and other directives
+  imports: [FormsModule, CommonModule, CircularProgressComponent], // Add CommonModule here for ngStyle and other directives
 })
 export class ResultsComponent {
-  correctAnswers = 8;  // This will be dynamically updated from the game component
+  correctAnswers = 8; // This will be dynamically updated from the game component
   totalQuestions = 10; // This will also be dynamically updated
   playerName = '';
-  progress: number = (this.correctAnswers / this.totalQuestions) * 360;  // Progress based on score
+  progress: number = (this.correctAnswers / this.totalQuestions) * 360; // Progress based on score
 
   constructor(private router: Router) {}
 
