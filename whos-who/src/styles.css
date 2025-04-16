@@ -1,7 +1,7 @@
 :root {
   --background: #0d0d0d;
   --button-bg: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
-  --modal-bg: rgba(0, 0, 0, 0.288);
+  --modal-bg: rgba(0, 0, 0, 0.548);
   --modal-foreground: #1a1a1a;
   --correct: #00ffb2;
   --incorrect: #ff5e78;

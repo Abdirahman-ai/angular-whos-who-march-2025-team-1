@@ -1,67 +1,56 @@
 /* leaderboard.component.css */
 .leaderboard-container {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    width: 80%;
-    margin: 0 auto;
-    max-width: 600px;
-  }
-  
-  .leaderboard-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .leaderboard-table {
-    width: 100%;
-    background-color: #444;
-    padding: 10px;
-    border-radius: 8px;
-  }
-  
-  .leaderboard-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    font-weight: bold;
-    border-bottom: 2px solid #555;
-  }
-  
-  .leaderboard-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #555;
-  }
-  
-  .leaderboard-row:last-child {
-    border-bottom: none;
-  }
-  
-  button.play-again {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button.play-again:hover {
-    background-color: #45a049;
-  }
-  
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 600px;
+}
 
-  .container{
-    height: 100dvh;
-    width: 100dvw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.leaderboard-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.leaderboard-table {
+  width: 100%;
+  background-color: var(--modal-bg);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 40px 0;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
+}
+
+.leaderboard-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.leaderboard-row:last-child {
+  border-bottom: none;
+}
+
+.container {
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data {
+  margin: 40px 0;
+}

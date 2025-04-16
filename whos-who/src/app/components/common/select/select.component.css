@@ -28,15 +28,6 @@
   z-index: 0;
 }
 
-.select option {
-  background-color: #5468ff;
-}
-
-.select option:hover {
-  cursor: pointer;
-  background-color: #6e7df0 !important;
-}
-
 .select:focus,
 .select:focus-within,
 .select:active {
@@ -44,13 +35,8 @@
   outline: none;
 }
 
-.select:focus {
+.select:focus option {
   background-color: #5468ff;
-}
-
-.select:focus option:hover {
-  cursor: pointer;
-  background-color: #6e7df0 !important;
 }
 
 .custom-arrow {
