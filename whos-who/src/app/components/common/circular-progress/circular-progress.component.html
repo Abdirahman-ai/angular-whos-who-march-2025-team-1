@@ -1,0 +1,32 @@
+<div className="circle-container">
+  <svg class="progress-ring" width="120" height="120">
+    <circle
+      class="progress-ring-background"
+      stroke-width="8"
+      fill="transparent"
+      r="52"
+      cx="60"
+      cy="60"
+    />
+    <circle
+      class="progress-ring-circle"
+      [class.red]="percent <= lessThanPercent"
+      stroke-width="8"
+      fill="transparent"
+      r="52"
+      cx="60"
+      cy="60"
+      [attr.stroke-dasharray]="circumference"
+      [attr.stroke-dashoffset]="strokeDashoffset"
+    />
+    <text
+      x="60"
+      y="60"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      class="progress-text"
+    >
+      {{ text }}
+    </text>
+  </svg>
+</div>
