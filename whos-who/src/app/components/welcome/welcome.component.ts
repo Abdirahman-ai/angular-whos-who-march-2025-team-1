@@ -45,6 +45,6 @@ export class WelcomeComponent implements OnInit {
       this.welcomeForm.controls['selectedCategory'].value ?? undefined
     );
 
-    this.router.navigateByUrl('/play');
+    /* this.router.navigateByUrl('/play'); */
   }
 }
