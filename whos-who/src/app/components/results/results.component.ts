@@ -15,7 +15,7 @@ export class ResultsComponent {
   correctAnswers = 8; // This will be dynamically updated from the game component
   totalQuestions = 10; // This will also be dynamically updated
   playerName = '';
-  progress: number = (this.correctAnswers / this.totalQuestions) * 360; // Progress based on score
+  progress: number = (this.correctAnswers / this.totalQuestions) * 100; // Progress based on score
 
   constructor(private router: Router) {}
 

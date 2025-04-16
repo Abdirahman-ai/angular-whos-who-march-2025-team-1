@@ -1,13 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-circular-progress',
+  imports: [CommonModule],
   templateUrl: './circular-progress.component.html',
   styleUrls: ['./circular-progress.component.css'],
 })
 export class CircularProgressComponent implements OnInit {
   @Input() percent: number = 0;
   @Input() text: string = '';
+  @Input() lessThanPercent: number = 0;
   circumference: number = 0;
   strokeDashoffset: number = 0;
   constructor() {}

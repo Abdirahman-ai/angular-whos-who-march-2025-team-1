@@ -10,6 +10,7 @@
     />
     <circle
       class="progress-ring-circle"
+      [class.red]="percent <= lessThanPercent"
       stroke-width="8"
       fill="transparent"
       r="52"
@@ -18,6 +19,14 @@
       [attr.stroke-dasharray]="circumference"
       [attr.stroke-dashoffset]="strokeDashoffset"
     />
+    <text
+      x="60"
+      y="60"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      class="progress-text"
+    >
+      {{ text }}
+    </text>
   </svg>
-  <h3 class="text">{{ text }}</h3>
 </div>

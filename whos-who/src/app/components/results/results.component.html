@@ -1,11 +1,12 @@
 <!-- results.component.html -->
 <div class="container">
-  <div class="results-container">
+  <div class="modal">
     <h1 class="results-title">WELL DONE!</h1>
 
     <app-circular-progress
       text=" {{ correctAnswers }} / {{ totalQuestions }}"
       [percent]="progress"
+      [lessThanPercent]="50"
     ></app-circular-progress>
 
     <p class="name-prompt">Enter your name for the leaderboard!</p>

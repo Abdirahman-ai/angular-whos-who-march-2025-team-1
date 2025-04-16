@@ -1,23 +1,22 @@
-.circle {
+.circle-container {
   position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.progress-text {
+  font-size: 16px;
+  fill: var(--primary-text);
+  font-weight: bold;
 }
 
 .progress-ring-circle {
   transition: 0.35s stroke-dashoffset;
-  transform: rotate(-90deg);
+  transform: rotate(-45deg);
   transform-origin: 50% 50%;
   stroke: var(--correct);
+}
+
+.progress-ring-circle.red {
+  stroke: var(--incorrect);
 }
 
 .progress-ring-background {

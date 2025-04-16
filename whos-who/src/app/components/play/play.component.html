@@ -1,3 +1,10 @@
-<p>
-  play works!
-</p>
+<div class="container">
+  <div class="modal">
+    this is the play section
+    <app-circular-progress
+      [percent]="percentTime"
+      [text]="timeLeft + 's'"
+      [lessThanPercent]="50"
+    ></app-circular-progress>
+  </div>
+</div>
