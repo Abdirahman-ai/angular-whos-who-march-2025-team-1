@@ -1,8 +1,17 @@
-.welcome-container {
+.welcome-modal {
   text-align: center;
-  background: var(--modal-foreground);
+  background-color: var(--modal-foreground);
   border-radius: 10px;
   padding: 30px;
-  width: 80%;
+  width: 100%;
   max-width: 500px;
+}
+
+.subheading {
+  margin-bottom: 60px;
+}
+
+.welcome-form {
+  width: 100%;
+  text-align: left;
 }

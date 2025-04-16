@@ -24,17 +24,27 @@
     ><a class="button" routerLink="/leaderboard" (click)="toggleIsOpen()"
       >leaderboard</a
     >
-    <p class="label">Difficulty</p>
-    <app-select [options]="difficultyOptions"></app-select>
-    <div class="sound-container">
-      <div class="sound">
-        <p class="label">Background music</p>
-        <app-toggle [toggleValue]="musicIsOn"></app-toggle>
+    <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+      <p class="label">Difficulty</p>
+      <app-select
+        [options]="difficultyOptions"
+        [control]="settingsForm.controls['selectedDifficulty']"
+      ></app-select>
+      <div class="sound-container">
+        <div class="sound">
+          <p class="label">Background music</p>
+          <app-toggle
+            [control]="settingsForm.controls['musicIsOn']"
+          ></app-toggle>
+        </div>
+        <div class="sound">
+          <p class="label">Sound Effects</p>
+          <app-toggle
+            [control]="settingsForm.controls['soundEffectsAreOn']"
+          ></app-toggle>
+        </div>
       </div>
-      <div class="sound">
-        <p class="label">Sound Effects</p>
-        <app-toggle [toggleValue]="soundEffectsAreOn"></app-toggle>
-      </div>
-    </div>
+      <button class="button">save</button>
+    </form>
   </div>
 </div>
