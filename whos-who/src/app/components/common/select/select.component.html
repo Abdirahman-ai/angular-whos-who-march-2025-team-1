@@ -1,7 +1,16 @@
 <div class="custom-select">
-  <select class="select" (click)="toggleDropdown()">
-    <option *ngFor="let option of options" [value]="option">
-      {{ option }}
+  <select class="select" (click)="toggleDropdown()" [formControl]="control">
+    <option *ngIf="placeHolder" [ngValue]="null" disabled>
+      {{ placeHolder }}
+    </option>
+    <option *ngFor="let option of options" [ngValue]="option">
+      {{
+        option.name
+          ? option.name.length > 32
+            ? option.name.slice(0, 32) + "..."
+            : option.name
+          : option
+      }}
     </option>
   </select>
   <span class="custom-arrow" [class.flipped]="isDropdownOpen">
