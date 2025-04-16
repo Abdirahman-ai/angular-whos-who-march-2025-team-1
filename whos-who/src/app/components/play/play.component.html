@@ -1,10 +1,31 @@
 <div class="container">
   <div class="modal">
-    this is the play section
+    <h1>Trivia Game</h1>
+    <p>Time Left: {{ timeLeft }}s</p> <!-- Display the updated countdown -->
     <app-circular-progress
       [percent]="percentTime"
       [text]="timeLeft + 's'"
       [lessThanPercent]="50"
     ></app-circular-progress>
+
+    <!-- Display the current question -->
+    <div *ngIf="!isGameOver; else gameOver">
+      <h2>{{ questions[currentQuestionIndex].question }}</h2>
+
+      <!-- Display the answer options -->
+      <div *ngFor="let answer of questions[currentQuestionIndex]?.all_answers">
+        <button (click)="answerQuestion(answer)">{{ answer }}</button>
+      </div>
+
+      <p>Score: {{ score }}</p>
+    </div>
+
+    <!-- Display Game Over screen -->
+    <ng-template #gameOver>
+      <h2>Game Over</h2>
+      <p>Your score: {{ score }} / {{ questions.length }}</p>
+      <button (click)="goToResults()">View Results</button>
+      <button (click)="restartGame()">Play Again</button>
+    </ng-template>
   </div>
 </div>

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import Category from './interfaces/Category';
 import Difficulty from './interfaces/Difficulty';
 import { BehaviorSubject, lastValueFrom } from 'rxjs';
+import { Question } from './interfaces/Question';
 
 const triviaApiUrl = 'https://opentdb.com';
 
@@ -10,6 +11,9 @@ const triviaApiUrl = 'https://opentdb.com';
   providedIn: 'root',
 })
 export class AppService {
+  private scoreSource = new BehaviorSubject<number>(0);
+  score = this.scoreSource.asObservable();
+
   constructor(private http: HttpClient) {}
 
   private numberOfQuestionsSource = new BehaviorSubject<number>(10);
@@ -55,6 +59,22 @@ export class AppService {
 
   setSoundEffectsOn(isOn: boolean) {
     this.soundEffectsOnSource.next(isOn);
+  }
+
+  setScore(score: number){
+    this.scoreSource.next(score);
+  }
+
+  getScore(){
+    return this.scoreSource.getValue();
+  }
+
+  getSelectedCategorySource(): Category | undefined {
+      return this.selectedCategorySource.getValue();
+  }
+
+  getNumberOfQuestions(): number {
+    return this.numberOfQuestionsSource.getValue();
   }
 
   async fetchCategories() {

@@ -1,0 +1,56 @@
+/* play.component.css */
+.container {
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  .modal {
+    text-align: center;
+    background-color: var(--modal-foreground);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 80%; 
+    max-width: 400px; 
+    display: inline-block;  
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  button:focus {
+    outline: none;
+    border: 2px solid #4caf50;
+  }
+  
